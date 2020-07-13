@@ -1,5 +1,5 @@
 import type {
-  Client, Collection, Message, PermissionResolvable, Snowflake,
+  Client, Collection, Message, PermissionResolvable,
 } from 'discord.js';
 
 export interface CustomClient extends Client {
@@ -19,6 +19,5 @@ export interface Command {
   description: string;
   hidden?: boolean;
   permissions?: PermissionResolvable;
-  role?: Snowflake;
   execute: (message: CustomMessage, args?: Array<string>) => Promise<CustomMessage | void>;
 }
